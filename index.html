@@ -31,16 +31,67 @@
 <!-- Memories Section -->
 <section id="memories" class="hidden" style="max-width: 1280px; margin-left: auto; margin-right: auto;">
 
+  <div class="card">
+
+    <div class="heart" id="heart">❤️</div>
+
+    <div class="message" id="msg">
+        💖 Happy Valentine's Day 💖
+    </div>
+
+</div>
+
+<script>
+
+const heart=document.getElementById("heart");
+const msg=document.getElementById("msg");
+const card=document.querySelector(".card");
+
+heart.addEventListener("click", ()=>{
+
+    /* Hide heart */
+    heart.classList.add("hide");
+
+    /* Create blast particles */
+    for(let i=0;i<30;i++){
+
+        const p=document.createElement("div");
+        p.className="particle";
+        p.innerHTML="💖";
+
+        const x=(Math.random()*400-200)+"px";
+        const y=(Math.random()*400-200)+"px";
+
+        p.style.setProperty('--x',x);
+        p.style.setProperty('--y',y);
+
+        p.style.left="50%";
+        p.style.top="50%";
+
+        card.appendChild(p);
+
+        setTimeout(()=>p.remove(),800);
+    }
+
+    /* Show message after blast */
+    setTimeout(()=>{
+        msg.classList.add("show");
+    },300);
+
+});
+
+</script>
+<!-- 
   <section class="valentine-section">
     <h1 class="valentine-title">
         Happy Valentine's Day Banjayya 💖
     </h1>
-  </section>
+  </section> -->
 
 
     <div style="max-width: 100%; display: flex; align-items: center; justify-content: center;">
       <div style="position: relative; display: flex; align-items: center; justify-content: center;">
-        <img src="1.gif" alt="" style="border: 10px solid red; border-radius: 15px; box-shadow: 5px 5px 5px rgb(0,0,0,0.5);">
+        <img src="assets/1.gif" alt="" style="border: 10px solid red; border-radius: 15px; box-shadow: 5px 5px 5px rgb(0,0,0,0.5);">
         <p style="
 position: absolute;
 right: 0;
@@ -65,24 +116,24 @@ LOVE YOU Benjayya
 
     <div class="gallery">
       <div class="image">
-        <!-- <img src="DSC_3242.JPG" alt="Memory 1">
-        <img src="SPP_8878.JPG" alt="Memory 2"> -->
+        <!-- <img src="assets/DSC_3242.JPG" alt="Memory 1">
+        <img src="assets/SPP_8878.JPG" alt="Memory 2"> -->
         <div class="quote-border">
-          <img src="DSC_2921.JPG" alt="Memory 3">
+          <img src="assets/DSC_2921.JPG" alt="Memory 3">
           <div class="card-text">
             <p>The promises we made on our wedding day, still echo in every heartbeat.
               Hand in hand, we vowed forever — and forever begins every day with you.💍❤️</p>
           </div>
         </div>
         <div class="quote-border">
-          <img src="DSC_2948.JPG" alt="Memory 4">
+          <img src="assets/DSC_2948.JPG" alt="Memory 4">
           <div class="card-text">
             <p>The moment you tied our forever around my neck,
               you tied my heart to yours for a lifetime.</p>
           </div>
         </div>
          <div class="quote-border">
-          <img src="DSC_3242.JPG" alt="Memory 4">
+          <img src="assets/DSC_3242.JPG" alt="Memory 4">
           <div class="card-text">
             <p>That tiny circle of gold,
               holds an endless promise of us.</p>
@@ -97,7 +148,7 @@ LOVE YOU Benjayya
             <div class="swiper-wrapper">
               <div class="swiper-slide">
                 <img
-                  src="DSC_3242.JPG"
+                  src="assets/DSC_3242.JPG"
                   alt="" />
                 <div class="overlay">
                   <h2>The Queen's Gambit</h2>
@@ -107,7 +158,7 @@ LOVE YOU Benjayya
               <div class="swiper-slide">
                 <img
                   class="img-position"
-                  src="DSC_3952.JPG"
+                  src="assets/DSC_3952.JPG"
                   alt="" />
                 <div class="overlay">
                   <h2>Breaking Bad</h2>
@@ -116,7 +167,7 @@ LOVE YOU Benjayya
 
               <div class="swiper-slide">
                 <img
-                  src="DSC_4124.JPG"
+                  src="assets/DSC_4124.JPG"
                   alt="" />
                 <div class="overlay">
                   <h2>Wednesday</h2>
@@ -125,7 +176,7 @@ LOVE YOU Benjayya
 
               <div class="swiper-slide">
                 <img
-                  src="DSC_4209.JPG"
+                  src="assets/DSC_4209.JPG"
                   alt="" />
                 <div class="overlay">
                   <h2>Stranger Things</h2>
@@ -134,7 +185,7 @@ LOVE YOU Benjayya
 
               <div class="swiper-slide">
                 <img
-                  src="IMG-20240910-WA0028.jpg"
+                  src="assets/IMG-20240910-WA0028.jpg"
                   alt="" />
                 <div class="overlay">
                   <h2>Anne with an E</h2>
@@ -143,7 +194,7 @@ LOVE YOU Benjayya
 
               <div class="swiper-slide">
                 <img
-                  src="IMG_20250224_203739.jpg"
+                  src="assets/IMG_20250224_203739.jpg"
                   alt="" />
                 <div class="overlay">
                   <h2>Friends</h2>
@@ -153,7 +204,7 @@ LOVE YOU Benjayya
               <div class="swiper-slide">
                 <img
                   class="img-position"
-                  src="IMG_20250225_210641.jpg"
+                  src="assets/IMG_20250225_210641.jpg"
                   alt="" />
                 <div class="overlay">
                   <h2>The Crown</h2>
@@ -162,7 +213,7 @@ LOVE YOU Benjayya
 
               <div class="swiper-slide">
                 <img
-                  src="IMG_20250302_104456.jpg"
+                  src="assets/IMG_20250302_104456.jpg"
                   alt="" />
                 <div class="overlay">
                   <h2>House M.D.</h2>
@@ -171,7 +222,7 @@ LOVE YOU Benjayya
 
               <div class="swiper-slide">
                 <img
-                  src="IMG_20250315_065526.jpg"
+                  src="assets/IMG_20250315_065526.jpg"
                   alt="" />
                 <div class="overlay">
                   <h2>Game of Thrones</h2>
@@ -180,7 +231,7 @@ LOVE YOU Benjayya
 
               <div class="swiper-slide">
                 <img
-                  src="IMG_20250315_065922.jpg"
+                  src="assets/IMG_20250315_065922.jpg"
                   alt="" />
                 <div class="overlay">
                   <h2>Game of Thrones</h2>
@@ -189,7 +240,7 @@ LOVE YOU Benjayya
 
               <div class="swiper-slide">
                 <img
-                  src="IMG_20250316_083950.jpg"
+                  src="assets/IMG_20250316_083950.jpg"
                   alt="" />
                 <div class="overlay">
                   <h2>Game of Thrones</h2>
@@ -198,7 +249,7 @@ LOVE YOU Benjayya
 
               <div class="swiper-slide">
                 <img
-                  src="IMG_20250315_065526.jpg"
+                  src="assets/IMG_20250315_065526.jpg"
                   alt="" />
                 <div class="overlay">
                   <h2>Game of Thrones</h2>
@@ -207,7 +258,7 @@ LOVE YOU Benjayya
 
               <div class="swiper-slide">
                 <img
-                  src="IMG_20250320_091312.jpg"
+                  src="assets/IMG_20250320_091312.jpg"
                   alt="" />
                 <div class="overlay">
                   <h2>Game of Thrones</h2>
@@ -216,7 +267,7 @@ LOVE YOU Benjayya
 
               <div class="swiper-slide">
                 <img
-                  src="IMG_20250320_110013.jpg"
+                  src="assets/IMG_20250320_110013.jpg"
                   alt="" />
                 <div class="overlay">
                   <h2>Game of Thrones</h2>
@@ -225,7 +276,7 @@ LOVE YOU Benjayya
 
               <div class="swiper-slide">
                 <img
-                  src="IMG_20250321_135905.jpg"
+                  src="assets/IMG_20250321_135905.jpg"
                   alt="" />
                 <div class="overlay">
                   <h2>Game of Thrones</h2>
@@ -234,7 +285,7 @@ LOVE YOU Benjayya
 
               <div class="swiper-slide">
                 <img
-                  src="IMG_20250706_130037.jpg"
+                  src="assets/IMG_20250706_130037.jpg"
                   alt="" />
                 <div class="overlay">
                   <h2>Game of Thrones</h2>
@@ -243,7 +294,7 @@ LOVE YOU Benjayya
 
               <div class="swiper-slide">
                 <img
-                  src="IMG_20250321_175724.jpg"
+                  src="assets/IMG_20250321_175724.jpg"
                   alt="" />
                 <div class="overlay">
                   <h2>Game of Thrones</h2>
@@ -252,7 +303,7 @@ LOVE YOU Benjayya
 
               <div class="swiper-slide">
                 <img
-                  src="IMG_20250706_130037.jpg"
+                  src="assets/IMG_20250706_130037.jpg"
                   alt="" />
                 <div class="overlay">
                   <h2>Game of Thrones</h2>
@@ -261,7 +312,7 @@ LOVE YOU Benjayya
 
               <div class="swiper-slide">
                 <img
-                  src="DSC_3989.jpg"
+                  src="assets/DSC_3989.jpg"
                   alt="" />
                 <div class="overlay">
                   <h2>Game of Thrones</h2>
@@ -270,7 +321,7 @@ LOVE YOU Benjayya
 
               <div class="swiper-slide">
                 <img
-                  src="IMG_20250720_162942.jpg"
+                  src="assets/IMG_20250720_162942.jpg"
                   alt="" />
                 <div class="overlay">
                   <h2>Game of Thrones</h2>
@@ -279,7 +330,7 @@ LOVE YOU Benjayya
 
               <div class="swiper-slide">
                 <img
-                  src="IMG_20250820_082205.jpg"
+                  src="assets/IMG_20250820_082205.jpg"
                   alt="" />
                 <div class="overlay">
                   <h2>Game of Thrones</h2>
@@ -288,7 +339,7 @@ LOVE YOU Benjayya
 
               <div class="swiper-slide">
                 <img
-                  src="SPP_8288.jpg"
+                  src="assets/SPP_8288.jpg"
                   alt="" />
                 <div class="overlay">
                   <h2>Game of Thrones</h2>
@@ -320,9 +371,9 @@ LOVE YOU Benjayya
           <!-- Slide 1 -->
           <div class="swiper-slide">
             <a data-fancybox="videos"
-              href="20240914_133854.mp4">
+              href="assets/20240914_133854.mp4">
               <video muted autoplay loop playsinline>
-                <source src="20240914_133854.mp4" type="video/mp4">
+                <source src="assets/20240914_133854.mp4" type="video/mp4">
               </video>
             </a>
           </div>
@@ -330,18 +381,18 @@ LOVE YOU Benjayya
           <!-- Slide 2 -->
           <div class="swiper-slide">
             <a data-fancybox="videos"
-              href="20240914_133854.mp4">
+              href="assets/20240914_133854.mp4">
               <video muted autoplay loop playsinline>
-                <source src="20240914_135257.mp4" type="video/mp4">
+                <source src="assets/20240914_135257.mp4" type="video/mp4">
               </video>
             </a>
           </div>
 
           <div class="swiper-slide">
             <a data-fancybox="videos"
-              href="20240914_133854.mp4">
+              href="assets/20240914_133854.mp4">
               <video muted autoplay loop playsinline>
-                <source src="20240914_132729.mp4" type="video/mp4">
+                <source src="assets/20240914_132729.mp4" type="video/mp4">
               </video>
             </a>
           </div>
@@ -367,7 +418,7 @@ LOVE YOU Benjayya
           <div class="swiper-wrapper">
             <div class="swiper-slide">
               <img
-                src="https://github.com/ecemgo/mini-samples-great-tricks/13468728/b6f5eb64-887c-43b1-aaba-d52a4c59a379"
+                src="https://github.com/ecemgo/mini-samples-great-tricks/assets/13468728/b6f5eb64-887c-43b1-aaba-d52a4c59a379"
                 alt="" />
               <div class="overlay">
                 <h2>The Queen's Gambit</h2>
@@ -377,7 +428,7 @@ LOVE YOU Benjayya
             <div class="swiper-slide">
               <img
                 class="img-position"
-                src="https://github.com/ecemgo/mini-samples-great-tricks/13468728/e906353b-fde0-4518-9a03-16545c1161bd"
+                src="https://github.com/ecemgo/mini-samples-great-tricks/assets/13468728/e906353b-fde0-4518-9a03-16545c1161bd"
                 alt="" />
               <div class="overlay">
                 <h2>Breaking Bad</h2>
@@ -386,7 +437,7 @@ LOVE YOU Benjayya
 
             <div class="swiper-slide">
               <img
-                src="https://github.com/ecemgo/mini-samples-great-tricks/13468728/fc21e481-e28a-41a8-9db3-3b62c1ddc17e"
+                src="https://github.com/ecemgo/mini-samples-great-tricks/assets/13468728/fc21e481-e28a-41a8-9db3-3b62c1ddc17e"
                 alt="" />
               <div class="overlay">
                 <h2>Wednesday</h2>
@@ -395,7 +446,7 @@ LOVE YOU Benjayya
 
             <div class="swiper-slide">
               <img
-                src="https://github.com/ecemgo/mini-samples-great-tricks/13468728/6b6ad966-79e1-4d3c-8f92-566d0fee8082"
+                src="https://github.com/ecemgo/mini-samples-great-tricks/assets/13468728/6b6ad966-79e1-4d3c-8f92-566d0fee8082"
                 alt="" />
               <div class="overlay">
                 <h2>Stranger Things</h2>
@@ -404,7 +455,7 @@ LOVE YOU Benjayya
 
             <div class="swiper-slide">
               <img
-                src="https://github.com/ecemgo/mini-samples-great-tricks/13468728/2ad44f5d-2215-4416-9c9b-2bae3be51a67"
+                src="https://github.com/ecemgo/mini-samples-great-tricks/assets/13468728/2ad44f5d-2215-4416-9c9b-2bae3be51a67"
                 alt="" />
               <div class="overlay">
                 <h2>Anne with an E</h2>
@@ -413,7 +464,7 @@ LOVE YOU Benjayya
 
             <div class="swiper-slide">
               <img
-                src="https://github.com/ecemgo/mini-samples-great-tricks/13468728/aa8fe914-741f-4bf4-ad4a-24f19d1f4178"
+                src="https://github.com/ecemgo/mini-samples-great-tricks/assets/13468728/aa8fe914-741f-4bf4-ad4a-24f19d1f4178"
                 alt="" />
               <div class="overlay">
                 <h2>Friends</h2>
@@ -423,7 +474,7 @@ LOVE YOU Benjayya
             <div class="swiper-slide">
               <img
                 class="img-position"
-                src="https://github.com/ecemgo/mini-samples-great-tricks/13468728/d5f10b4f-7d34-45bd-bb5f-5f1530c2ac1c"
+                src="https://github.com/ecemgo/mini-samples-great-tricks/assets/13468728/d5f10b4f-7d34-45bd-bb5f-5f1530c2ac1c"
                 alt="" />
               <div class="overlay">
                 <h2>The Crown</h2>
@@ -432,7 +483,7 @@ LOVE YOU Benjayya
 
             <div class="swiper-slide">
               <img
-                src="https://github.com/ecemgo/mini-samples-great-tricks/13468728/7cbac263-7c55-4428-908e-31018dc1bce3"
+                src="https://github.com/ecemgo/mini-samples-great-tricks/assets/13468728/7cbac263-7c55-4428-908e-31018dc1bce3"
                 alt="" />
               <div class="overlay">
                 <h2>House M.D.</h2>
@@ -441,7 +492,7 @@ LOVE YOU Benjayya
 
             <div class="swiper-slide">
               <img
-                src="https://github.com/ecemgo/mini-samples-great-tricks/13468728/2929f534-3bc3-4cbd-b84c-80df863d5a38"
+                src="https://github.com/ecemgo/mini-samples-great-tricks/assets/13468728/2929f534-3bc3-4cbd-b84c-80df863d5a38"
                 alt="" />
               <div class="overlay">
                 <h2>Game of Thrones</h2>
@@ -548,564 +599,27 @@ LOVE YOU Benjayya
     },
   });
 </script>
-
-
-
-</body>
-</html>
-=======
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Will You Be My Valentine? ❤️</title>
-<link rel="stylesheet" href="style.css">
-
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
-
-
-<!-- Swiper CSS -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
-
-<!-- Fancybox CSS -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.css"/>
-
-
-</head>
-<body style="position: relative;">
-
-<!-- Proposal Section -->
-<section id="proposal" class="center">
-    <h1>Will You Be My Valentine? ❤️</h1>
-    <div class="buttons">
-        <button id="yesBtn">Yes 💖</button>
-        <button id="noBtn">No 😢</button>
-    </div>
-</section>
-
-<!-- Memories Section -->
-<section id="memories" class="hidden" style="max-width: 1280px; margin-left: auto; margin-right: auto;">
-
-  <section class="valentine-section">
-    <h1 class="valentine-title">
-        Happy Valentine's Day Banjayya 💖
-    </h1>
-  </section>
-
-
-    <div style="max-width: 100%; display: flex; align-items: center; justify-content: center;">
-      <div style="position: relative; display: flex; align-items: center; justify-content: center;">
-        <img src="1.gif" alt="" style="border: 10px solid red; border-radius: 15px; box-shadow: 5px 5px 5px rgb(0,0,0,0.5);">
-        <p style="
-position: absolute;
-right: 0;
-bottom: 0px;
-color: purple;
-font-weight: 700;
-font-style: italic;
-transform: rotate(-30deg);
-font-size: 30px;
-text-shadow:
-  2px 2px 5px rgba(0,0,0,0.3),
-  0 0 10px rgba(255,105,180,0.6),
-  0 0 20px rgba(255,105,180,0.4);
-">
-LOVE YOU Benjayya
-</p>
-
-      </div>
-    </div>
-    <br><br><br><br>
-    <h2>The Moment Our Forever Began 💞</h2>
-
-    <div class="gallery">
-      <div class="image">
-        <!-- <img src="DSC_3242.JPG" alt="Memory 1">
-        <img src="SPP_8878.JPG" alt="Memory 2"> -->
-        <div class="quote-border">
-          <img src="DSC_2921.JPG" alt="Memory 3">
-          <div class="card-text">
-            <p>The promises we made on our wedding day, still echo in every heartbeat.
-              Hand in hand, we vowed forever — and forever begins every day with you.💍❤️</p>
-          </div>
-        </div>
-        <div class="quote-border">
-          <img src="DSC_2948.JPG" alt="Memory 4">
-          <div class="card-text">
-            <p>The moment you tied our forever around my neck,
-              you tied my heart to yours for a lifetime.</p>
-          </div>
-        </div>
-         <div class="quote-border">
-          <img src="DSC_3242.JPG" alt="Memory 4">
-          <div class="card-text">
-            <p>That tiny circle of gold,
-              holds an endless promise of us.</p>
-          </div>
-        </div>
-      </div>
-      <!-- <div class="section"> -->
-        <br><br>
-        <h2>Proof that we can fight, annoy each other, and still choose forever. 😂❤️</h2>
-        <div class="content img-swiper">
-          <div class="swiper imgSwiper">
-            <div class="swiper-wrapper">
-              <div class="swiper-slide">
-                <img
-                  src="DSC_3242.JPG"
-                  alt="" />
-                <div class="overlay">
-                  <h2>The Queen's Gambit</h2>
-                </div>
-              </div>
-
-              <div class="swiper-slide">
-                <img
-                  class="img-position"
-                  src="DSC_3952.JPG"
-                  alt="" />
-                <div class="overlay">
-                  <h2>Breaking Bad</h2>
-                </div>
-              </div>
-
-              <div class="swiper-slide">
-                <img
-                  src="DSC_4124.JPG"
-                  alt="" />
-                <div class="overlay">
-                  <h2>Wednesday</h2>
-                </div>
-              </div>
-
-              <div class="swiper-slide">
-                <img
-                  src="DSC_4209.JPG"
-                  alt="" />
-                <div class="overlay">
-                  <h2>Stranger Things</h2>
-                </div>
-              </div>
-
-              <div class="swiper-slide">
-                <img
-                  src="IMG-20240910-WA0028.jpg"
-                  alt="" />
-                <div class="overlay">
-                  <h2>Anne with an E</h2>
-                </div>
-              </div>
-
-              <div class="swiper-slide">
-                <img
-                  src="IMG_20250224_203739.jpg"
-                  alt="" />
-                <div class="overlay">
-                  <h2>Friends</h2>
-                </div>
-              </div>
-
-              <div class="swiper-slide">
-                <img
-                  class="img-position"
-                  src="IMG_20250225_210641.jpg"
-                  alt="" />
-                <div class="overlay">
-                  <h2>The Crown</h2>
-                </div>
-              </div>
-
-              <div class="swiper-slide">
-                <img
-                  src="IMG_20250302_104456.jpg"
-                  alt="" />
-                <div class="overlay">
-                  <h2>House M.D.</h2>
-                </div>
-              </div>
-
-              <div class="swiper-slide">
-                <img
-                  src="IMG_20250315_065526.jpg"
-                  alt="" />
-                <div class="overlay">
-                  <h2>Game of Thrones</h2>
-                </div>
-              </div>
-
-              <div class="swiper-slide">
-                <img
-                  src="IMG_20250315_065922.jpg"
-                  alt="" />
-                <div class="overlay">
-                  <h2>Game of Thrones</h2>
-                </div>
-              </div>
-
-              <div class="swiper-slide">
-                <img
-                  src="IMG_20250316_083950.jpg"
-                  alt="" />
-                <div class="overlay">
-                  <h2>Game of Thrones</h2>
-                </div>
-              </div>
-
-              <div class="swiper-slide">
-                <img
-                  src="IMG_20250315_065526.jpg"
-                  alt="" />
-                <div class="overlay">
-                  <h2>Game of Thrones</h2>
-                </div>
-              </div>
-
-              <div class="swiper-slide">
-                <img
-                  src="IMG_20250320_091312.jpg"
-                  alt="" />
-                <div class="overlay">
-                  <h2>Game of Thrones</h2>
-                </div>
-              </div>
-
-              <div class="swiper-slide">
-                <img
-                  src="IMG_20250320_110013.jpg"
-                  alt="" />
-                <div class="overlay">
-                  <h2>Game of Thrones</h2>
-                </div>
-              </div>
-
-              <div class="swiper-slide">
-                <img
-                  src="IMG_20250321_135905.jpg"
-                  alt="" />
-                <div class="overlay">
-                  <h2>Game of Thrones</h2>
-                </div>
-              </div>
-
-              <div class="swiper-slide">
-                <img
-                  src="IMG_20250706_130037.jpg"
-                  alt="" />
-                <div class="overlay">
-                  <h2>Game of Thrones</h2>
-                </div>
-              </div>
-
-              <div class="swiper-slide">
-                <img
-                  src="IMG_20250321_175724.jpg"
-                  alt="" />
-                <div class="overlay">
-                  <h2>Game of Thrones</h2>
-                </div>
-              </div>
-
-              <div class="swiper-slide">
-                <img
-                  src="IMG_20250706_130037.jpg"
-                  alt="" />
-                <div class="overlay">
-                  <h2>Game of Thrones</h2>
-                </div>
-              </div>
-
-              <div class="swiper-slide">
-                <img
-                  src="DSC_3989.jpg"
-                  alt="" />
-                <div class="overlay">
-                  <h2>Game of Thrones</h2>
-                </div>
-              </div>
-
-              <div class="swiper-slide">
-                <img
-                  src="IMG_20250720_162942.jpg"
-                  alt="" />
-                <div class="overlay">
-                  <h2>Game of Thrones</h2>
-                </div>
-              </div>
-
-              <div class="swiper-slide">
-                <img
-                  src="IMG_20250820_082205.jpg"
-                  alt="" />
-                <div class="overlay">
-                  <h2>Game of Thrones</h2>
-                </div>
-              </div>  
-
-              <div class="swiper-slide">
-                <img
-                  src="SPP_8288.jpg"
-                  alt="" />
-                <div class="overlay">
-                  <h2>Game of Thrones</h2>
-                </div>
-              </div>
-
-            </div>
-          </div>
-        </div>
-        <ul class="hearts">
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-      </ul>
-      <!-- </div> -->
-    </div>
-
-    <div class="" style="max-width: 1280px; margin-left: auto; margin-right: auto;">
-      <div class="swiper videoSwiper">
-        <div class="swiper-wrapper" style="display: block;">
-
-          <!-- Slide 1 -->
-          <div class="swiper-slide">
-            <a data-fancybox="videos"
-              href="20240914_133854.mp4">
-              <video muted autoplay loop playsinline>
-                <source src="20240914_133854.mp4" type="video/mp4">
-              </video>
-            </a>
-          </div>
-
-          <!-- Slide 2 -->
-          <div class="swiper-slide">
-            <a data-fancybox="videos"
-              href="20240914_133854.mp4">
-              <video muted autoplay loop playsinline>
-                <source src="20240914_135257.mp4" type="video/mp4">
-              </video>
-            </a>
-          </div>
-
-          <div class="swiper-slide">
-            <a data-fancybox="videos"
-              href="20240914_133854.mp4">
-              <video muted autoplay loop playsinline>
-                <source src="20240914_132729.mp4" type="video/mp4">
-              </video>
-            </a>
-          </div>
-
-
-
-        </div>
-      </div>
-    </div>
-
-
-
-    <h3>Forever With You ❤️</h3>
-    <h3>Happiest when it's us</h3>
-</section>
-
-
-
-
-    <!-- <section>
-      <div class="content">
-        <div class="swiper">
-          <div class="swiper-wrapper">
-            <div class="swiper-slide">
-              <img
-                src="https://github.com/ecemgo/mini-samples-great-tricks/13468728/b6f5eb64-887c-43b1-aaba-d52a4c59a379"
-                alt="" />
-              <div class="overlay">
-                <h2>The Queen's Gambit</h2>
-              </div>
-            </div>
-
-            <div class="swiper-slide">
-              <img
-                class="img-position"
-                src="https://github.com/ecemgo/mini-samples-great-tricks/13468728/e906353b-fde0-4518-9a03-16545c1161bd"
-                alt="" />
-              <div class="overlay">
-                <h2>Breaking Bad</h2>
-              </div>
-            </div>
-
-            <div class="swiper-slide">
-              <img
-                src="https://github.com/ecemgo/mini-samples-great-tricks/13468728/fc21e481-e28a-41a8-9db3-3b62c1ddc17e"
-                alt="" />
-              <div class="overlay">
-                <h2>Wednesday</h2>
-              </div>
-            </div>
-
-            <div class="swiper-slide">
-              <img
-                src="https://github.com/ecemgo/mini-samples-great-tricks/13468728/6b6ad966-79e1-4d3c-8f92-566d0fee8082"
-                alt="" />
-              <div class="overlay">
-                <h2>Stranger Things</h2>
-              </div>
-            </div>
-
-            <div class="swiper-slide">
-              <img
-                src="https://github.com/ecemgo/mini-samples-great-tricks/13468728/2ad44f5d-2215-4416-9c9b-2bae3be51a67"
-                alt="" />
-              <div class="overlay">
-                <h2>Anne with an E</h2>
-              </div>
-            </div>
-
-            <div class="swiper-slide">
-              <img
-                src="https://github.com/ecemgo/mini-samples-great-tricks/13468728/aa8fe914-741f-4bf4-ad4a-24f19d1f4178"
-                alt="" />
-              <div class="overlay">
-                <h2>Friends</h2>
-              </div>
-            </div>
-
-            <div class="swiper-slide">
-              <img
-                class="img-position"
-                src="https://github.com/ecemgo/mini-samples-great-tricks/13468728/d5f10b4f-7d34-45bd-bb5f-5f1530c2ac1c"
-                alt="" />
-              <div class="overlay">
-                <h2>The Crown</h2>
-              </div>
-            </div>
-
-            <div class="swiper-slide">
-              <img
-                src="https://github.com/ecemgo/mini-samples-great-tricks/13468728/7cbac263-7c55-4428-908e-31018dc1bce3"
-                alt="" />
-              <div class="overlay">
-                <h2>House M.D.</h2>
-              </div>
-            </div>
-
-            <div class="swiper-slide">
-              <img
-                src="https://github.com/ecemgo/mini-samples-great-tricks/13468728/2929f534-3bc3-4cbd-b84c-80df863d5a38"
-                alt="" />
-              <div class="overlay">
-                <h2>Game of Thrones</h2>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <ul class="hearts">
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-      </ul>
-    </section> -->
-
-    <!-- <ul class="hearts">
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-      </ul> -->
-
-
-      
-
-<script src="script.js"></script>
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.5/swiper-bundle.min.js"></script>
-
 <script>
-    var swiper = new Swiper(".imgSwiper", {
-        effect: "cards",
-        cardsEffect: {
-        rotate: true,
-        },
-        grabCursor: true,
-        initialSlide: 2,
-        speed: 500,
-        loop: true,
-        mousewheel: {
-        invert: false,
-    },
-    });
-</script>
+  const yesBtn = document.getElementById("yesBtn");
+const noBtn = document.getElementById("noBtn");
+const proposal = document.getElementById("proposal");
+const memories = document.getElementById("memories");
 
-<!-- Swiper JS -->
-<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-
-<!-- Fancybox JS -->
-<script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.umd.js"></script>
-
-
-<script>
-  // Swiper Init
-  const swiper = new Swiper(".videoSwiper", {
-  slidesPerView: 1.2, // 🔥 important for spacing visibility
-  spaceBetween: 30,
-  loop: true,
-  centeredSlides: false,
-  grabCursor: true,
-  speed: 800,
-
-  autoplay: {
-    delay: 2500,
-    disableOnInteraction: false,
-  },
-
-  breakpoints: {
-    768: {
-      slidesPerView: 2.2,
-      spaceBetween: 30,
-    },
-    1024: {
-      slidesPerView: 3.2,
-      spaceBetween: 40,
-    }
-  }
+// YES button click
+yesBtn.addEventListener("click", () => {
+    proposal.style.display = "none";
+    memories.classList.remove("hidden");
+    memories.scrollIntoView({ behavior: "smooth" });
 });
 
+// NO button runs away 😄
+noBtn.addEventListener("mouseover", () => {
+    const x = Math.random() * 300 - 150;
+    const y = Math.random() * 300 - 150;
+    noBtn.style.transform = `translate(${x}px, ${y}px)`;
+});
 
-  // Fancybox Init
-  Fancybox.bind("[data-fancybox='videos']", {
-    Toolbar: {
-      display: ["close"],
-    },
-    Html: {
-      video: {
-        autoplay: true,
-      },
-    },
-  });
 </script>
 
 
-
 </body>
-</html>
